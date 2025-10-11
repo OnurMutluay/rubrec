@@ -1,0 +1,83 @@
+.language {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.mobileLanguage {
+    padding: 0rem 2.2rem 0rem 2.2rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: var(--gray);
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+}
+
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms all;
+}
+
+.modal {
+    width: 40vw;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    opacity: 1;
+    border-radius: var(--radiusLg);
+    position: relative;
+    gap: 1rem;
+}
+
+.modal p {
+    opacity: 0.5;
+}
+
+.close {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 84em) {
+}
+@media (max-width: 64em) {
+    .modal {
+        width: calc(100vw - 4rem);
+        padding: 3rem;
+    }
+
+    .close {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}
+@media (max-width: 48em) {
+}
+@media (max-width: 30em) {
+}

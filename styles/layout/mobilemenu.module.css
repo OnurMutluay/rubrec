@@ -1,0 +1,121 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: var(--background);
+    transition: 350ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    margin-top: 7rem;
+    overflow-x: hidden; /* ← Yatay scroll'u kapat */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+ul.menu {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    width: calc(100% - 4rem); /* ← Container padding'i için */
+    left: 2rem; /* ← Container padding offset */
+    right: 2rem;
+}
+
+ul.menu.menuActive {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    position: relative;
+    width: 100%; /* ← Aktif olunca full width */
+    left: 0;
+    right: 0;
+}
+
+ul.menu li {
+    list-style-type: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem var(--gray) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+ul.menu li span {
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+ul.menu li span.colorized {
+    background-color: var(--gray);
+}
+
+.actionButtons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.cta {
+    height: 6rem;
+    border-radius: var(--radius);
+    background-color: var(--foreground);
+    color: var(--background);
+    flex: 1;
+    border: none;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.back {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    border-bottom: 0.1rem var(--gray) solid;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 85em) {
+}
+
+@media (max-width: 80em) {
+}
+
+@media (max-width: 64em) {
+    ul.nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 48em) {
+    .logo {
+        width: 24rem;
+    }
+}
+
+@media (max-width: 30em) {
+}

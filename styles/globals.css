@@ -1,42 +1,102 @@
+@import url('./reset.css');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #000000;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #e2e2e2;
+    --radius: 1rem;
+    --radiusLg: 2rem;
+    --radiusXl: 3rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='dark'] {
+    --background: #000000;
+    --foreground: #ffffff;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #232323;
+    --radius: 1rem;
+    --radiusLg: 2rem;
+    --radiusXl: 3rem;
 }
 
-html,
+html {
+    font-size: 62.5%;
+    font-family: 'Geist';
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    background-color: var(--background);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+    font-size: 6.4rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h2 {
+    font-size: 4.2rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h3 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h4 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+}
+
+h5 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p.small {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+p.caption {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+p.footnote {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 136rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 84em) {
+    .container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+@media (max-width: 64em) {
+}
+@media (max-width: 48em) {
+}
+@media (max-width: 30em) {
 }

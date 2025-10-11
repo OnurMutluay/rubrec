@@ -1,0 +1,31 @@
+{
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+
+    "services": "Services",
+    "industries": "Industries",
+    "caseStudies": "Case Studies",
+    "exploreRubrec": "Explore Rubrec",
+    "insights": "Insights",
+    "contact": "Contact",
+    "headerCTA": "Schedule a Call",
+
+    "changeLanguage": "Change Language",
+    "changeLanguageDescription": "Select your preferred language",
+    "selectLanguage": "Select language",
+
+    "strategyAndDesign": "Strategy & Design",
+    "developmentAndEngineering": "Development & Engineering",
+    "aiAndAgent": "AI & Agent",
+    "productManagement": "Product Management",
+    "cloudAndInfrastructure": "Cloud & Infrastructure",
+    "auditAndQA": "Audit & QA",
+
+    "healthcare": "Healthcare",
+    "foodDataSolutions": "Food Data Solutions",
+    "startupsAndScaleups": "Startups & Scaleups",
+    "education": "Education",
+    "digitalShelf": "Digital Shelf",
+    "retail": "Retail"
+}

@@ -1,21 +1,28 @@
 {
-  "name": "rubrec-website",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.4"
-  },
-  "devDependencies": {
-    "eslint": "^9",
-    "eslint-config-next": "15.5.4",
-    "@eslint/eslintrc": "^3"
-  }
+    "name": "rubrec-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build --turbopack",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "framer-motion": "^12.23.22",
+        "geist": "^1.5.1",
+        "hamburger-react": "^2.5.2",
+        "lucide-react": "^0.545.0",
+        "next": "15.5.4",
+        "next-themes": "^0.4.6",
+        "nprogress": "^0.2.0",
+        "react": "19.1.0",
+        "react-dom": "19.1.0",
+        "react-select": "^5.10.2"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "eslint": "^9",
+        "eslint-config-next": "15.5.4"
+    }
 }

@@ -1,0 +1,31 @@
+{
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "back": "Geri",
+
+    "services": "Servisler",
+    "industries": "Sektörler",
+    "caseStudies": "Projeler",
+    "exploreRubrec": "Rubrec'i Keşfedin",
+    "insights": "İçgörüler",
+    "contact": "İletişim",
+    "headerCTA": "Toplantı Planla",
+
+    "changeLanguage": "Dili Değiştir",
+    "changeLanguageDescription": "Tercih ettiğiniz dili seçin",
+    "selectLanguage": "Dil Seçin",
+
+    "strategyAndDesign": "Strateji ve Tasarım",
+    "developmentAndEngineering": "Yazılım ve Mühendislik",
+    "aiAndAgent": "Yapay Zekâ ve Ajanlar",
+    "productManagement": "Ürün Yönetimi",
+    "cloudAndInfrastructure": "Bulut ve Altyapı",
+    "auditAndQA": "Denetim ve Kalite Güvencesi",
+
+    "healthcare": "Sağlık",
+    "foodDataSolutions": "Besin Verisi Çözümleri",
+    "startupsAndScaleups": "Girişimler ve Ölçeklenen Şirketler",
+    "education": "Eğitim",
+    "digitalShelf": "Dijital Raf Yönetimi",
+    "retail": "Perakende"
+}
