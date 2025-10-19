@@ -11,17 +11,6 @@
     --radiusXl: 3rem;
 }
 
-[data-theme='dark'] {
-    --background: #000000;
-    --foreground: #ffffff;
-    --white: #ffffff;
-    --black: #000000;
-    --gray: #232323;
-    --radius: 1rem;
-    --radiusLg: 2rem;
-    --radiusXl: 3rem;
-}
-
 html {
     font-size: 62.5%;
     font-family: 'Geist';
@@ -64,21 +53,25 @@ h5 {
 p {
     font-size: 1.8rem;
     font-weight: 400;
+    line-height: 2.6rem;
 }
 
 p.small {
     font-size: 1.6rem;
     font-weight: 400;
+    line-height: 2.2rem;
 }
 
 p.caption {
     font-size: 1.4rem;
     font-weight: 400;
+    line-height: 2rem;
 }
 
 p.footnote {
     font-size: 1.2rem;
     font-weight: 400;
+    line-height: 1.6rem;
 }
 
 .container {
@@ -95,8 +88,14 @@ p.footnote {
     }
 }
 @media (max-width: 64em) {
+    html {
+        font-size: 57.5%;
+    }
 }
 @media (max-width: 48em) {
+    h2 {
+        font-size: 3.2rem;
+    }
 }
 @media (max-width: 30em) {
 }

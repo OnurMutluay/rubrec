@@ -1,4 +1,3 @@
-import { ThemeProvider } from 'next-themes';
 import { GeistSans } from 'geist/font/sans';
 import '@/styles/globals.css';
 import Header from '@/components/layout/Header';
@@ -12,11 +11,9 @@ Router.events.on('routeChangeComplete', nProgress.done);
 
 export default function App({ Component, pageProps }) {
     return (
-        <ThemeProvider>
-            <main className={GeistSans.className}>
-                <Header />
-                <Component {...pageProps} />
-            </main>
-        </ThemeProvider>
+        <main className={GeistSans.className}>
+            <Header />
+            <Component {...pageProps} />
+        </main>
     );
 }

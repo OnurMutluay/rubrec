@@ -4,7 +4,6 @@ import { ChevronRight, ChevronLeft, ArrowRight } from 'lucide-react';
 import { useLocalization } from '@/hooks/useLocalization';
 import styles from '../../styles/layout/mobilemenu.module.css';
 import Language from './Language';
-import ThemeSwitcher from './ThemeSwitcher';
 
 const MainMobileMenu = ({ activeMenu, setActiveMenu }) => {
     const t = useLocalization();
@@ -231,7 +230,6 @@ const MobileMenu = (props) => {
 
             <div className={`container ${styles.actionButtons}`}>
                 <Language mobile={true} />
-                <ThemeSwitcher />
             </div>
         </div>
     );

@@ -18,6 +18,8 @@ const Header = () => {
 
     const t = useLocalization();
 
+    const [drop, setDrop] = React.useState(false);
+
     return (
         <header className={styles.wrapper}>
             <div className={`container ${styles.container}`}>
@@ -153,7 +155,7 @@ const Header = () => {
 
                         <Language />
 
-                        <Button variant="secondary" size="small" icon={<ArrowRight size={18} />}>
+                        <Button variant="primary" size="small" icon={<ArrowRight size={18} />}>
                             {t.headerCTA}
                         </Button>
                     </ul>

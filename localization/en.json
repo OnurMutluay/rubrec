@@ -27,5 +27,19 @@
     "startupsAndScaleups": "Startups & Scaleups",
     "education": "Education",
     "digitalShelf": "Digital Shelf",
-    "retail": "Retail"
+    "retail": "Retail",
+
+    "heroCTA": "From Idea to Digital Product",
+    "heroDescription": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "foodmetrics": "Foodmetrics",
+    "foodmetricsDescription": "Food Data Solution",
+
+    "ourServices": "Our Services",
+    "ourServicesDescription": "Future-ready digital services combining strategy, technology and innovation.",
+    "developmentAndEngineeringDescription": "We help businesses thrive by turning ideas into impactful, scalable solutions.",
+    "strategyAndDesignDescription": "We help businesses thrive by turning ideas into impactful, scalable solutions.",
+    "aiAndAgentDescription": "We help businesses thrive by turning ideas into impactful, scalable solutions.",
+    "productManagementDescription": "We help businesses thrive by turning ideas into impactful, scalable solutions.",
+    "cloudAndInfrastructureDescription": "We help businesses thrive by turning ideas into impactful, scalable solutions.",
+    "auditAndQADescription": "We help businesses thrive by turning ideas into impactful, scalable solutions."
 }
