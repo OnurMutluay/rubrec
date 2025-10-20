@@ -1,12 +1,15 @@
+import { useLocalization } from '@/hooks/useLocalization';
 import styles from '../../styles/home/brands.module.css';
 import Button from '../ui/Button';
 
 const Brands = () => {
+    const t = useLocalization();
+
     return (
         <div className={`container ${styles.container}`}>
             <div className={styles.titleContainer}>
                 <div className={styles.title}>
-                    <h3>Trusted by Leading Brands</h3>
+                    <h3>{t.brandsTitle}</h3>
                     <p className="caption">
                         We partner with innovative brands to deliver impactful digital services that drive growth and
                         transformation.
@@ -15,7 +18,7 @@ const Brands = () => {
 
                 <div className={styles.button}>
                     <Button size="small" variant="secondary">
-                        All Brands
+                        {t.allBrands}
                     </Button>
                 </div>
             </div>
@@ -26,34 +29,25 @@ const Brands = () => {
                 <div className={styles.brand}>
                     <img className={styles.lipton} src="/images/customers/lipton_dark.svg" alt="Lipton" />
 
-                    <p className="caption">
-                        We partner with innovative brands to deliver impactful digital services that drive growth and
-                        transformation.
-                    </p>
+                    <p className="caption">{t.liptonBrand}</p>
                 </div>
 
                 <div className={styles.brand}>
                     <img className={styles.trt} src="/images/customers/trt.svg" alt="TRT" />
 
-                    <p className="caption">
-                        We partner with innovative brands to deliver impactful digital services that drive growth and
-                        transformation.
-                    </p>
+                    <p className="caption">{t.trtGlobalBrand}</p>
                 </div>
 
                 <div className={styles.brand}>
                     <img className={styles.metro} src="/images/customers/metro_dark.svg" alt="Metro" />
 
-                    <p className="caption">
-                        We partner with innovative brands to deliver impactful digital services that drive growth and
-                        transformation.
-                    </p>
+                    <p className="caption">{t.metroBrand}</p>
                 </div>
             </div>
 
             <div className={styles.mobileButton}>
                 <Button size="small" variant="secondary" fullWidth>
-                    All Brands
+                    {t.allBrands}
                 </Button>
             </div>
         </div>

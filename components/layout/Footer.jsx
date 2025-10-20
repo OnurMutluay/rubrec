@@ -3,18 +3,21 @@ import styles from '../../styles/layout/footer.module.css';
 import Button from '../ui/Button';
 import Link from 'next/link';
 import Input from '../ui/Input';
+import { useLocalization } from '@/hooks/useLocalization';
 
 const Footer = () => {
+    const t = useLocalization();
+
     return (
         <footer>
             <section className={styles.contact}>
                 <div className={`container ${styles.contactContainer}`}>
                     <div className={styles.texts}>
-                        <h3>Get in Touch with Rubrec Today!</h3>
-                        <p className="small">Ready to Transform Your Ideas into Impactful Digital Solutions?</p>
+                        <h3>{t.contactCTA}</h3>
+                        <p className="small">{t.contactCTADesc}</p>
                     </div>
 
-                    <Button icon={<MessageCircleMore />}>Talk to an Expert</Button>
+                    <Button icon={<MessageCircleMore />}>{t.talkToAnExpert}</Button>
                 </div>
             </section>
 
@@ -49,7 +52,7 @@ const Footer = () => {
                                 />
                             </svg>
 
-                            <p>Get news and updates from Rubrec</p>
+                            <p>{t.socialCTA}</p>
                         </div>
 
                         <ul>
@@ -134,15 +137,10 @@ const Footer = () => {
                     <div className={styles.formContainer}>
                         <div className={styles.form}>
                             <Input />
-                            <Button>Gönder</Button>
+                            <Button>{t.register}</Button>
                         </div>
 
-                        <p className="footnote">
-                            By signing up, you agree to receive notifications and marketing content (including emails, social
-                            media posts, etc.) from Rubrec Company regarding both current and future products and services.
-                            You have the option to withdraw your consent and unsubscribe at any time by clicking the
-                            unsubscribe link in any of our communications.
-                        </p>
+                        <p className="footnote">{t.newsletterDescription}</p>
                     </div>
                 </div>
             </section>
@@ -151,122 +149,122 @@ const Footer = () => {
                 <div className={`container ${styles.linksContainer}`}>
                     <ul>
                         <li>
-                            <p>Services</p>
+                            <p>{t.services}</p>
                         </li>
                         <li>
-                            <Link href="#">Strategy & Design</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">Development & Engineering</Link>
+                            <Link href="#">{t.strategyAndDesign}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">AI & Agents</Link>
+                            <Link href="#">{t.developmentAndEngineering}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Product Management</Link>
+                            <Link href="#">{t.aiAndAgent}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Cloud & Infrastructure</Link>
+                            <Link href="#">{t.productManagement}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Audit & QA</Link>
+                            <Link href="#">{t.cloudAndInfrastructure}</Link>
+                        </li>
+
+                        <li>
+                            <Link href="#">{t.auditAndQA}</Link>
                         </li>
                     </ul>
 
                     <ul>
                         <li>
-                            <p>Industries</p>
+                            <p>{t.industries}</p>
                         </li>
                         <li>
-                            <Link href="#">Healthcare</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">Startups & Scaleups</Link>
+                            <Link href="#">{t.healthcare}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Food Data Solutions</Link>
+                            <Link href="#">{t.startupsAndScaleups}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Education</Link>
+                            <Link href="#">{t.foodDataSolutions}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Digital Shelf</Link>
+                            <Link href="#">{t.education}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Retail</Link>
+                            <Link href="#">{t.digitalShelf}</Link>
+                        </li>
+
+                        <li>
+                            <Link href="#">{t.retail}</Link>
                         </li>
                     </ul>
 
                     <ul>
                         <li>
-                            <p>Case Studies</p>
+                            <p>{t.caseStudies}</p>
                         </li>
                         <li>
-                            <Link href="#">Metro</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">Lipton</Link>
+                            <Link href="#">{t.metro}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">TRT Global</Link>
+                            <Link href="#">{t.lipton}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Heva</Link>
+                            <Link href="#">{t.trt}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Secunnix</Link>
+                            <Link href="#">{t.heva}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">FitAction</Link>
+                            <Link href="#">{t.fitaction}</Link>
+                        </li>
+
+                        <li>
+                            <Link href="#">{t.secunnix}</Link>
                         </li>
                     </ul>
 
                     <ul>
                         <li>
-                            <p>Company</p>
+                            <p>{t.company}</p>
                         </li>
                         <li>
-                            <Link href="#">Explore Rubrec</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">Contact</Link>
+                            <Link href="#">{t.exploreRubrec}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Insights</Link>
+                            <Link href="#">{t.contact}</Link>
+                        </li>
+
+                        <li>
+                            <Link href="#">{t.insights}</Link>
                         </li>
                     </ul>
 
                     <ul>
                         <li>
-                            <p>Policies</p>
+                            <p>{t.policies}</p>
                         </li>
                         <li>
-                            <Link href="#">Terms & Conditions</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">Privacy Policy</Link>
+                            <Link href="#">{t.termsAndConditions}</Link>
                         </li>
 
                         <li>
-                            <Link href="#">Cookie Policy</Link>
+                            <Link href="#">{t.privacyPolicy}</Link>
+                        </li>
+
+                        <li>
+                            <Link href="#">{t.cookiePolicy}</Link>
                         </li>
                     </ul>
                 </div>
