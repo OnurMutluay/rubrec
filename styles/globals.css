@@ -6,6 +6,7 @@
     --white: #ffffff;
     --black: #000000;
     --gray: #e2e2e2;
+    --darkGray: #999999;
     --radius: 1rem;
     --radiusLg: 2rem;
     --radiusXl: 3rem;
@@ -71,7 +72,7 @@ p.caption {
 p.footnote {
     font-size: 1.2rem;
     font-weight: 400;
-    line-height: 1.6rem;
+    line-height: 2rem;
 }
 
 .container {

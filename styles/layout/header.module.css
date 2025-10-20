@@ -1,4 +1,10 @@
-header.wrapper {
+section.wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
+
+header.menu {
     width: 100%;
     position: sticky;
     top: 0;
@@ -36,7 +42,7 @@ header.wrapper {
 
 ul.nav {
     display: flex;
-    gap: 4.5rem;
+    gap: 2.4rem;
     align-items: center;
 }
 
@@ -44,6 +50,13 @@ ul.nav li {
     list-style-type: none;
     position: relative;
     margin: 0;
+    cursor: pointer;
+}
+
+.active {
+    padding: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 3rem;
 }
 
 .nav > li::after {
@@ -56,44 +69,37 @@ ul.nav li {
     background: transparent;
 }
 
-ul.nav li a {
+ul.nav li a,
+ul.nav li span {
     font-size: 1.6rem;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
 }
 
-.dropdownMenu {
-    display: none;
+.dropdowns {
+    position: relative;
+}
+
+.dropdown {
     position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 3rem 5rem 3rem 5rem;
+    width: 100%;
     background-color: var(--foreground);
-    border-radius: var(--radius);
-    z-index: 1000;
+    padding: 2rem 0rem;
+    transition: 150ms all;
+}
+
+.dropdown ul {
     display: flex;
-    gap: 8rem;
-    width: max-content;
-    margin-top: 1.5rem;
     align-items: center;
+    gap: 6rem;
 }
 
-.dropdownMenu ul {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-}
-
-.dropdownMenu ul li {
-    list-style-type: disc;
+.dropdown ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     color: var(--background);
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-.dropdownMenu img {
-    border-radius: var(--radius);
-    width: 36.8rem;
-    object-fit: 'cover';
-    display: 'block';
+    font-size: 1.5rem;
 }
 
 .hamburger {
@@ -107,6 +113,10 @@ ul.nav li a {
 }
 
 @media (max-width: 80em) {
+    .dropdowns {
+        display: none;
+    }
+
     ul.nav {
         display: none;
     }

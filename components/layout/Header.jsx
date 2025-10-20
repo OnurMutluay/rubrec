@@ -10,164 +10,128 @@ import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
 
 const Header = () => {
-    const [openDropdown, setOpenDropdown] = React.useState(null);
     const [isOpen, setOpen] = React.useState(false);
-
-    const [selectedService, setSelectedService] = React.useState('design_strategy');
-    const [selectedIndustry, setSelectedIndustry] = React.useState('healthcare');
-
     const t = useLocalization();
 
-    const [drop, setDrop] = React.useState(false);
+    const [activeDropdown, setActiveDropdown] = React.useState(null);
+    const servicesRef = React.useRef(null);
+    const industriesRef = React.useRef(null);
+    const navRef = React.useRef(null);
+
+    React.useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Tüm nav içinde tıklanmadıysa dropdown kapat
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setActiveDropdown(null);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     return (
-        <header className={styles.wrapper}>
-            <div className={`container ${styles.container}`}>
-                <Link href="/">
-                    <img className={styles.logo} src="/images/logo_dark.svg" width={120} alt="Logo" />
-                </Link>
+        <section className={styles.wrapper}>
+            <header className={styles.menu}>
+                <div className={`container ${styles.container}`}>
+                    <Link href="/">
+                        <img className={styles.logo} src="/images/logo_dark.svg" width={120} alt="Logo" />
+                    </Link>
 
-                <div className={styles.navWrapper}>
-                    <ul className={styles.nav}>
-                        <li
-                            onMouseLeave={() => {
-                                setOpenDropdown(null);
-                                setSelectedService('design_strategy');
-                            }}
-                            onMouseEnter={() => setOpenDropdown('services')}
-                        >
-                            <Link href="#">{t.services}</Link>
-
-                            <motion.div
-                                className={styles.dropdownMenu}
-                                initial={false}
-                                animate={{
-                                    opacity: openDropdown === 'services' ? 1 : 0,
-                                    y: openDropdown === 'services' ? 0 : -10,
-                                    pointerEvents: openDropdown === 'services' ? 'auto' : 'none',
-                                }}
-                                transition={{
-                                    type: 'spring',
-                                    stiffness: 400,
-                                    damping: 30,
+                    <div className={styles.navWrapper} ref={navRef}>
+                        <ul className={styles.nav}>
+                            <li
+                                ref={servicesRef}
+                                onClick={() => {
+                                    setActiveDropdown(activeDropdown === 'services' ? null : 'services');
                                 }}
                             >
-                                <ul>
-                                    <li onMouseEnter={() => setSelectedService('design_strategy')}>
-                                        <Link href="#">{t.strategyAndDesign}</Link>
-                                    </li>
+                                <span className={activeDropdown === 'services' && styles.active}>{t.services}</span>
+                            </li>
 
-                                    <li onMouseEnter={() => setSelectedService('development_engineering')}>
-                                        <Link href="#">{t.developmentAndEngineering}</Link>
-                                    </li>
-
-                                    <li onMouseEnter={() => setSelectedService('ai_agents')}>
-                                        <Link href="#">{t.aiAndAgent}</Link>
-                                    </li>
-
-                                    <li onMouseEnter={() => setSelectedService('product_management')}>
-                                        <Link href="#">{t.productManagement}</Link>
-                                    </li>
-
-                                    <li onMouseEnter={() => setSelectedService('cloud_infrastructure')}>
-                                        <Link href="#">{t.cloudAndInfrastructure}</Link>
-                                    </li>
-
-                                    <li onMouseEnter={() => setSelectedService('audit_qa')}>
-                                        <Link href="#">{t.auditAndQA}</Link>
-                                    </li>
-                                </ul>
-
-                                <img src={`/images/${selectedService}.jpg`} alt="Services" />
-                            </motion.div>
-                        </li>
-
-                        <li
-                            onMouseLeave={() => {
-                                setOpenDropdown(null);
-                                setSelectedIndustry('healthcare');
-                            }}
-                            onMouseEnter={() => setOpenDropdown('industries')}
-                        >
-                            <Link href="#">{t.industries}</Link>
-
-                            <motion.div
-                                className={styles.dropdownMenu}
-                                initial={false}
-                                animate={{
-                                    opacity: openDropdown === 'industries' ? 1 : 0,
-                                    y: openDropdown === 'industries' ? 0 : -10,
-                                    pointerEvents: openDropdown === 'industries' ? 'auto' : 'none',
-                                }}
-                                transition={{
-                                    type: 'spring',
-                                    stiffness: 400,
-                                    damping: 30,
+                            <li
+                                ref={industriesRef}
+                                onClick={() => {
+                                    setActiveDropdown(activeDropdown === 'industries' ? null : 'industries');
                                 }}
                             >
-                                <ul>
-                                    <li onMouseEnter={() => setSelectedIndustry('healthcare')}>
-                                        <Link href="#">{t.healthcare}</Link>
-                                    </li>
+                                <span className={activeDropdown === 'industries' && styles.active}>{t.industries}</span>
+                            </li>
 
-                                    <li onMouseEnter={() => setSelectedIndustry('food_data_solutions')}>
-                                        <Link href="#">{t.foodDataSolutions}</Link>
-                                    </li>
+                            <li>
+                                <Link href="#">{t.caseStudies}</Link>
+                            </li>
+                        </ul>
 
-                                    <li onMouseEnter={() => setSelectedIndustry('startups_scaleups')}>
-                                        <Link href="#">{t.startupsAndScaleups}</Link>
-                                    </li>
+                        <ul className={styles.nav}>
+                            <li>
+                                <Link href="#">{t.exploreRubrec}</Link>
+                            </li>
 
-                                    <li onMouseEnter={() => setSelectedIndustry('education')}>
-                                        <Link href="#">{t.education}</Link>
-                                    </li>
+                            <li>
+                                <Link href="#">{t.insights}</Link>
+                            </li>
 
-                                    <li onMouseEnter={() => setSelectedIndustry('digital_shelf')}>
-                                        <Link href="#">{t.digitalShelf}</Link>
-                                    </li>
+                            <li>
+                                <Link href="#">{t.contact}</Link>
+                            </li>
 
-                                    <li onMouseEnter={() => setSelectedIndustry('retail')}>
-                                        <Link href="#">{t.retail}</Link>
-                                    </li>
-                                </ul>
+                            <Language />
 
-                                <img src={`/images/industries_${selectedIndustry}.jpg`} alt="Industries" />
-                            </motion.div>
-                        </li>
+                            <Button variant="primary" size="small" icon={<ArrowRight size={18} />}>
+                                {t.headerCTA}
+                            </Button>
+                        </ul>
+                    </div>
 
-                        <li>
-                            <Link href="#">{t.caseStudies}</Link>
-                        </li>
-                    </ul>
+                    <div className={styles.hamburger}>
+                        <Hamburger distance="sm" color="var(--foreground)" rounded toggled={isOpen} toggle={setOpen} />
+                    </div>
+                </div>
+                <MobileMenu isOpen={isOpen} />
+            </header>
 
-                    <ul className={styles.nav}>
-                        <Link href="#">
-                            <p className="small">{t.exploreRubrec}</p>
-                        </Link>
-
-                        <Link href="#">
-                            <p className="small">{t.insights}</p>
-                        </Link>
-
-                        <Link href="#">
-                            <p className="small">{t.contact}</p>
-                        </Link>
-
-                        <Language />
-
-                        <Button variant="primary" size="small" icon={<ArrowRight size={18} />}>
-                            {t.headerCTA}
-                        </Button>
+            <div className={styles.dropdowns}>
+                <div
+                    style={{
+                        visibility: activeDropdown === 'services' ? 'visible' : 'hidden',
+                        opacity: activeDropdown === 'services' ? 1 : 0,
+                        zIndex: activeDropdown === 'services' ? 1001 : -999,
+                    }}
+                    className={styles.dropdown}
+                >
+                    <ul className="container">
+                        <li>{t.strategyAndDesign}</li>
+                        <li>{t.developmentAndEngineering}</li>
+                        <li>{t.aiAndAgent}</li>
+                        <li>{t.productManagement}</li>
+                        <li>{t.cloudAndInfrastructure}</li>
+                        <li>{t.auditAndQA}</li>
                     </ul>
                 </div>
 
-                <div className={styles.hamburger}>
-                    <Hamburger distance="sm" color="var(--foreground)" rounded toggled={isOpen} toggle={setOpen} />
+                <div
+                    style={{
+                        visibility: activeDropdown === 'industries' ? 'visible' : 'hidden',
+                        opacity: activeDropdown === 'industries' ? 1 : 0,
+                        zIndex: activeDropdown === 'industries' ? 1001 : -999,
+                    }}
+                    className={styles.dropdown}
+                >
+                    <ul className="container">
+                        <li>{t.healthcare}</li>
+                        <li>{t.foodDataSolutions}</li>
+                        <li>{t.startupsAndScaleups}</li>
+                        <li>{t.education}</li>
+                        <li>{t.digitalShelf}</li>
+                        <li>{t.retail}</li>
+                    </ul>
                 </div>
             </div>
-
-            <MobileMenu isOpen={isOpen} />
-        </header>
+        </section>
     );
 };
 

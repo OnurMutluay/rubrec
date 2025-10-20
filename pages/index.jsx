@@ -1,4 +1,6 @@
+import Brands from '@/components/home/Brands';
 import Hero from '@/components/home/Hero';
+import Insights from '@/components/home/Insights';
 import Services from '@/components/home/Services';
 import Button from '@/components/ui/Button';
 import Dropdown from '@/components/ui/Dropdown';
@@ -17,6 +19,8 @@ export default function Home() {
             </Head>
             <Hero />
             <Services />
+            <Brands />
+            <Insights />
         </>
     );
 }

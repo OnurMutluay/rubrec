@@ -1,0 +1,17 @@
+.badge {
+    width: fit-content;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radiusXl);
+}
+
+.primary {
+    background-color: var(--foreground);
+    color: var(--background);
+    font-size: 1.2rem;
+}
+
+.secondary {
+    background-color: var(--gray);
+    color: var(--foreground);
+    font-size: 1.2rem;
+}

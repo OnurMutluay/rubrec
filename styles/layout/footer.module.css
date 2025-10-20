@@ -1,0 +1,128 @@
+section.contact {
+    width: 100%;
+    background-color: var(--gray);
+    position: relative;
+}
+
+section.contact::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.8rem;
+    background: linear-gradient(to right, #c9c7ef, #e5e8e0, #73c4ff, #73c4ff, #b1a1e1);
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletterContainer {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    align-items: center;
+    padding-top: 6rem;
+    gap: 6rem;
+    padding-bottom: 6rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.socials .cta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.socials ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.socials ul li {
+    list-style-type: none;
+}
+
+.newsletterContainer .formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.newsletterContainer .form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.newsletterContainer .formContainer p {
+    color: var(--darkGray);
+}
+
+.linksContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 6rem;
+    margin-bottom: 10rem;
+}
+
+.linksContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.linksContainer li {
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+
+.linksContainer li:first-child {
+    font-weight: 600;
+}
+
+@media (max-width: 85em) {
+}
+
+@media (max-width: 80em) {
+}
+
+@media (max-width: 64em) {
+    .newsletterContainer {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .contactContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .contactContainer h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 30em) {
+}
