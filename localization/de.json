@@ -2,6 +2,7 @@
     "save": "Save",
     "cancel": "Cancel",
     "back": "Back",
+    "register": "Register",
 
     "services": "Services",
     "industries": "Industries",
@@ -47,5 +48,28 @@
     "liptonBrand": "We partner with innovative brands to deliver impactful digital services that drive growth and transformation.",
     "trtGlobalBrand": "We partner with innovative brands to deliver impactful digital services that drive growth and transformation.",
     "metroBrand": "We partner with innovative brands to deliver impactful digital services that drive growth and transformation.",
-    "allBrands": "All Brands"
+    "allBrands": "All Brands",
+
+    "insightsDescription": "We partner with innovative brands to deliver impactful digital services that drive growth and transformation.",
+    "milestones": "Milestones",
+    "insight": "We Established a Long-Term Strategy and Design Partnership with Lipton",
+    "insightDate": "November 25 - 2025",
+    "allInsights": "All Insights",
+
+    "contactCTA": "Get in Touch with Rubrec Today!",
+    "contactCTADesc": "Ready to Transform Your Ideas into Impactful Digital Solutions?",
+    "talkToAnExpert": "Talk to an Expert",
+    "socialCTA": "Get news and updates from Rubrec",
+    "newsletterDescription": "By signing up, you agree to receive notifications and marketing content (including emails, social media posts, etc.) from Rubrec Company regarding both current and future products and services. You have the option to withdraw your consent and unsubscribe at any time by clicking the unsubscribe link in any of our communications.",
+    "lipton": "Lipton",
+    "metro": "Metro",
+    "trt": "TRT",
+    "heva": "Heva",
+    "fitaction": "FitAction",
+    "secunnix": "Secunnix",
+    "company": "Company",
+    "policies": "Policies",
+    "termsAndConditions": "Terms & Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy"
 }
