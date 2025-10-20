@@ -136,7 +136,7 @@ const Footer = () => {
 
                     <div className={styles.formContainer}>
                         <div className={styles.form}>
-                            <Input />
+                            <Input placeholder="Your email" />
                             <Button>{t.register}</Button>
                         </div>
 

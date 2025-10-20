@@ -94,7 +94,7 @@ section.contact::after {
 }
 
 .linksContainer li:first-child {
-    font-weight: 600;
+    font-weight: bold;
 }
 
 @media (max-width: 85em) {
